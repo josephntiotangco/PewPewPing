@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ads="clr-namespace:PingTest.ViewModels;assembly=PingTest"
+             x:Class="PingTest.MainPage" >
+    <Grid Padding="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" BackgroundColor="Black">
+            <Label Text="PING TEST by jntDevz" HeightRequest="40" TextColor="White" Margin="5" FontAttributes="Bold" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Medium"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame CornerRadius="10"  Margin="10" Grid.Row="0">
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="White" Offset="0.0"/>
+                        <GradientStop Color="Black" Offset="0.25"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <StackLayout Grid.Row="0" Orientation="Vertical">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" WidthRequest="100" TextColor="White" Text="PING COUNT : " FontAttributes="Bold" LineBreakMode="WordWrap" FontSize="Body" Visual="Material"/>
+                        <Label Grid.Row="1" Grid.Column="0" WidthRequest="100" TextColor="White"  Text="URL/ IP ADDRESS :" FontAttributes="Bold" LineBreakMode="WordWrap" FontSize="Body" Visual="Material"/>
+                        <Frame Grid.Row="0" Grid.Column="1" Padding="2" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                            <Entry Grid.Row="0" Grid.Column="1" Text="{Binding PingCount}" HorizontalTextAlignment="Center" FontSize="Body" Placeholder="Ping Count" Completed="OnCompleted" Keyboard="Numeric"  HorizontalOptions="FillAndExpand"/>
+                        </Frame>
+                        <Frame Grid.Row="1" Grid.Column="1" Padding="2" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Address}" HorizontalTextAlignment="Center" FontSize="Body" Placeholder="Address" Completed="OnCompleted"  HorizontalOptions="FillAndExpand" />
+                        </Frame>
+                    </Grid>
+                    <Button Text="PING" ImageSource="ic_launcher.png" ContentLayout="left,0"  HeightRequest="50" Visual="Material" Margin="50,0,50,0" BackgroundColor="DarkGray" TextColor="White" WidthRequest="30" HorizontalOptions="FillAndExpand" Command="{Binding PingCommand}"/>
+                    <Label Text="{Binding ErrorMessage}" TextColor="Red" FontAttributes="Bold" FontSize="Body" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <Grid Grid.Row="1" Margin="20,0,20,0" Padding="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Margin="10" WidthRequest="100" HorizontalTextAlignment="Center" Text="Address" FontSize="Body" FontAttributes="Bold"/>
+                <Label Grid.Column="1" Margin="10" WidthRequest="100" HorizontalTextAlignment="Center" Text="Time" FontSize="Body" FontAttributes="Bold"/>
+                <Label Grid.Column="2" Margin="10" WidthRequest="100" HorizontalTextAlignment="Center" Text="Status" FontSize="Body" FontAttributes="Bold"/>
+            </Grid>
+            <Frame Grid.Row="2" CornerRadius="10" Padding="2" BackgroundColor="White" Margin="10,0,10,0">
+                <ListView Grid.Row="2" ItemsSource="{Binding Responses}"  SeparatorColor="Gray" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding IPAddress}" FontSize="12" TextColor="Black" Margin="10" WidthRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Label Grid.Column="1" Text="{Binding ResponseTime}" FontSize="12" TextColor="Black" Margin="0,0,0,0" WidthRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Label Grid.Column="2" Text="{Binding ErrorMessage}" FontSize="12" TextColor="Black" Margin="0,0,10,0" WidthRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
+            
+        </Grid>
+        <ads:AdMobView Grid.Row="3" Margin="5" HeightRequest="100" BackgroundColor="Black" VerticalOptions="End"/>
+    </Grid>
+</ContentPage>

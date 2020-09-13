@@ -1,0 +1,14 @@
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\bin\Release\netstandard2.0\PingTest.deps.json
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\bin\Release\netstandard2.0\PingTest.dll
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\bin\Release\netstandard2.0\ref\PingTest.dll
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\bin\Release\netstandard2.0\PingTest.pdb
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\App.xaml.g.cs
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\PingTest.AssemblyInfoInputs.cache
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\PingTest.AssemblyInfo.cs
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\PingTest.csproj.CoreCompileInputs.cache
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\XamlC.stamp
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\PingTest.dll
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\ref\PingTest.dll
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\PingTest.pdb
+D:\MY FILES\MY PROJECTS\GitHub\PingTest\PingTest\obj\Release\netstandard2.0\PingTest.csprojAssemblyReference.cache
